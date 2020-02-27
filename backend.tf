@@ -3,6 +3,6 @@ terraform {
     bucket = "terraform-ashishpradhan"
     key    = "terraform/dev/ecs-ngnix"
     region = "us-east-1"
-    profile = "ashish"
+    profile = "ashishpradhan"
   }
 }

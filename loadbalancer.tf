@@ -2,7 +2,7 @@ resource "aws_lb" "default" {
   name               = "terraform-ecs-nginx"
   internal           = false
   load_balancer_type = "application"
-  security_groups    = ["${aws_security_group.default_lb.id}"]
+  security_groups    = ["${aws_security_group.default_loadbalancer.id}"]
   subnets            = ["subnet-368e916a", "subnet-4e584060"]
   enable_deletion_protection = false
   tags = {

@@ -1,5 +1,5 @@
 resource "aws_iam_role" "default" {
-    name                = "terraform-ecs-nginx"
+    name                = "terraform-ecs-bulbapp"
     assume_role_policy  = "${data.aws_iam_policy_document.default.json}"
 }
 data "aws_iam_policy_document" "default" {
@@ -16,6 +16,6 @@ resource "aws_iam_role_policy_attachment" "default" {
     policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role"
 }
 resource "aws_iam_instance_profile" "default" {
-    name = "terraform-ecs-nginx"
+    name = "terraform-ecs-bulbapp"
     roles = ["${aws_iam_role.default.id}"]
 }
